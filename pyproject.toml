@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "scrapecrow"
+version = "0.1.0"
+description = "scrapecrow blog"
+authors = ["granitosaurus <bernardas.alisauskas@pm.me>"]
+license = "GPLv3"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pelican = {extras = ["mardown"], version = "^4.6.0"}
+invoke = "^1.6.0"
+livereload = "^2.6.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
