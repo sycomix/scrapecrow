@@ -182,6 +182,6 @@ If you're stuck with a web-scraping problem visit [#web-scraping on matrix] or [
 [#discovery-methods]: /tag/discovery-methods.html
 [#discovery]: /tag/discovery.html
 [searchbar]: /web-scraping-discovery-search.html
-[code-github]: https://github.com/granitosaurus/scrapecrow/TODO
+[code-github]: https://github.com/Granitosaurus/scrapecrow/blob/main/examples/discovery-sitemaps.py
 [#web-scraping on matrix]: https://matrix.to/#/%23web-scraping:matrix.org
 [hire me]: /hire.html

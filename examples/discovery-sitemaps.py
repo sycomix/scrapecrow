@@ -29,5 +29,5 @@ for url in parse_sitemap(sitemap_directory):
         if not re.search(r"shein.com/.+?\.html", url):
             continue
         product_urls.add(url)
-# print("\n".join(product_urls[-100:]))
+print("\n".join(product_urls))
 print(len(product_urls))
