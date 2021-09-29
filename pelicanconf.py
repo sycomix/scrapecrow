@@ -22,10 +22,10 @@ THEME = "corvid"
 TYPOGRIFY = False
 # THEME based settings
 CONTENT_LICENSE = "CC BY-SA 2021"  #  unused
-UTERANCES_REPO = "granitosaurus/scrapecrow"
+UTTERANCES_REPO = "granitosaurus/scrapecrow"
 EMAILSUB_LINK = "https://716df175.sibforms.com/serve/MUIEALpKPp8WjHrVwQOX6keZXLkJRbnFEh2y6YhTmVmT4Z0Khgbi2MFvPO1OObOrjbMi_S0M7VXkXGkcbh36H-SqEwM3dHXxdrOOXwEPGcp9rTQKkQvMkC70Dq9RmCoikia87nLsRcx0VVGmCG2zyx5s8BwpqevRmh70vKSaLe7e95yZDCROMvm2HcN3UpLw7UsFxl_UbI6TjY_e"
 APPLAUSE_BUTTON = True
-TOC_INSERT = True  # whether to insert TOC after first paragraph 
+TOC_INSERT = True  # whether to insert TOC after first paragraph
 
 # Content
 STATIC_PATHS = ["images", "pages", "extra", "examples", "partial"]
