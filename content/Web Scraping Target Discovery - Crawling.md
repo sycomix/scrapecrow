@@ -1,11 +1,12 @@
 Title: Web Scraping Target Discovery: Crawling
 Date: 2021-09-28
-Tags: discovery, python, crawling
+Tags: discovery, crawling, intermediate, discovery-methods
 Slug: web-scraping-discovery-crawling
-Summary: The most common web scraping target discovery technique: recursive crawling. How does it work? What are the pros and cons and the most optimal execution paterns?
+Summary: The most common web scraping target discovery technique: recursive crawling. How does it work? What are the pros and cons and the most optimal execution patterns?
 toc: True
 add_toc: True
 
+[% img-full src="banner-web.jpg" %]
 
 {! content/partial/Web Scraping Target Discovery_intro.md !}
 
@@ -139,7 +140,7 @@ class HMScraper:
 	    ...
 ```
 
-With this skeleton we have basic usage API for our scraper. We can define our run function:
+With this skeleton, we have basic usage API for our scraper. We can define our run function:
 
 ```python
 async def run():
@@ -217,7 +218,7 @@ Here we first build a tree parser object to get all those `<a>` node links. Then
 Link Extraction can get complicated very quickly as some website can contain non-html files (e.g. `/document.pdf`) that need to be filtered out and many other niche scenarios. 
 {:.info}
 
-With link extraction complete we can put together our whole crawler into once piece and see how it performs!
+With link extraction complete, we can put together our whole crawler into once piece and see how it performs!
 
 ### Putting It All Together
 
@@ -231,11 +232,11 @@ If we run our crawler we'll notice few things:
 - At time of writing 13800~ results are being found which matches well with our other [#discovery-methods] used in this blog series.
 - It took a while to complete this crawl: TODO second. Since we are crawling so many pages compared to other discovery methods we crawl 
 
-Finally we can see that we can easily reuse most of this scraper for other websites, all we need to do is change our rules! That's the big selling point of crawlers is that they're less domain specific than individual web scrapers.
+Finally, we can see that we can easily reuse most of this scraper for other websites, all we need to do is change our rules! That's the big selling point of crawlers, is that they're less domain specific than individual web scrapers.
 
 ## Summary and Further Reading
 
-To summarize web crawling is a great discovery technique that lends easily to generic/broad scraper development because same scrape loop can be applied to many targets just with some rule adjustments. However it's less efficient - slower and riskier when it comes to blocks - than other discovery techniques like [Search Bar] or [Sitemaps]. 
+To summarize, web crawling is a great discovery technique that lends easily to generic/broad scraper development because the same scrape loop can be applied to many targets just with some rule adjustments. However it's less efficient - slower and riskier when it comes to blocks - than other discovery techniques like [Search Bar] or [Sitemaps]. 
 
 {! content/partial/Web Scraping Target Discovery_outro.md !}
 
@@ -245,3 +246,4 @@ The code used in this article can be found on [github][code-github].
 [scraper-source]: http://github.com
 [Sitemaps]: /web-scraping-discover-sitemaps.html
 [Search Bar]: /web-scraping-discover-search.html
+[code-github]: https://github.com/Granitosaurus/scrapecrow/tree/main/examples

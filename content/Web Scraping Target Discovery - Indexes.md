@@ -1,10 +1,12 @@
 Title: Web Scraping Target Discovery: Indexes
 Date: 2021-09-28
-Tags: discovery, python, index
+Tags: discovery, indexes, intermediate
 Slug: web-scraping-discovery-indexes
-Summary: The most common web scraping target discovery technique: recursive crawling. How does it work? What are the pros and cons and the most optimal execution paterns?
+Summary: The most common web scraping target discovery technique: recursive crawling. How does it work? What are the pros and cons and the most optimal execution patterns?
 toc: True
 add_toc: True
+
+[% img-full src="banner-books.jpg" %]
 
 {! content/partial/Web Scraping Target Discovery_intro.md !}
 

@@ -1,10 +1,12 @@
 Title: Introduction To Reverse Engineering The Web
 Date: 2021-10-08
-Tags: reverse-engineering, python, web-scraping, beginner
+Tags: reverse-engineering, python, beginner
 Slug: reverse-engineering-intro
 Summary: To efficiently scrape a web resource, understanding how it works and functions is often a vital step. Reverse engineering a website behavior is often first step when developing a web-scraper - let's take a look how!
 toc: True
 add_toc: True
+
+[% img-full src="banner-machines.png" %]
 
 Unfortunately for web-scrapers modern websites are much more than html files strung together and served over http protocol. Often websites are complex structures of multiple executions layers and file formats that are designed specifically for one of the most complex programs in the world - web browsers.  
 
@@ -201,6 +203,9 @@ Reverse engineering story doesn't end here - web is becoming more complex by the
 So stick around for more articles and if you have any questions, come join us on [#web-scraping on matrix], check out [#web-scraping on stackoverflow] or leave a comment below!  
 
 As always, you can hire me for web-scraping consultation over at [hire] page and happy scraping!  
+
+<hr>
+<figcaption>Banner image by: "ENIGMA cipher machine collection" by brewbooks is licensed under CC BY-SA 2.0</figcaption>
 
 
 [MDN's http header documentation]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers

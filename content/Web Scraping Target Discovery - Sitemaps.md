@@ -1,10 +1,12 @@
 Title: Web Scraping Target Discovery: Sitemaps
 Date: 2021-09-28
-Tags: discovery, discovery-methods, python, sitemap
+Tags: discovery, discovery-methods, sitemap, intermediate
 Slug: web-scraping-discovery-sitemaps
 Summary: There are many techniques when it comes to discovery web-scraping targets. One of the most common ones is to use website sitemap indexes. What are they and to take advantage of them in web-scraping?
 toc: True
 add_toc: True
+
+[% img-full src="banner-map.jpg" %]
 
 {! content/partial/Web Scraping Target Discovery_intro.md !}
 
@@ -28,15 +30,15 @@ To put it shortly sitemap files are always of xml type (often gzip compressed) d
 </urlset> 
 ```
 
-for more on sitemap structure rules see [official specification page](https://www.sitemaps.org/protocol.html)
+for more on sitemap structure rules, see [official specification page](https://www.sitemaps.org/protocol.html)
 {:.info}
 
-The documents themselves are usually categorized by names so for example:   
+The documents themselves are usually categorized by names, so for example:   
 
 - blog post of the website would be contained in `sitemap_blogs.xml`.   
 - Sold products might be separated in multiple files of `sitemap_products_1.xml`, `sitemap_products_2.xml` etc  
 
-Before using sitemaps a web scraping discovery strategy it's a good practice to reflect on common pros and cons of this technique and see whether that would fit your web-scraping project:
+Before using sitemaps a web scraping discovery strategy, it's a good practice to reflect on common pros and cons of this technique and see whether that would fit your web-scraping project:
 
 Pros:  
 
@@ -51,12 +53,12 @@ Cons:
 - __Availability__: Sitemaps is/used to be an important part of the web, particularly used in SEO however they are not always present in modern websites that either try to avoid web-scraping or use hard-to-index website structures or are just too big for such indexes.  
 - __Risk__: Some website use sitemaps as honeypots for web-scrapers and direct to invalid data or use it to identify and ban scrapers.
 
-As you can see Sitemaps discovery approach appears to be simple and efficient though not always viable. Generally when developing discovery strategy sitemaps is the first place I look for product data, then confirm quality by trying alternative discovery approaches and seeing if coverage matches. 
+As you can see, Sitemaps discovery approach appears to be simple and efficient, though not always viable. Generally when developing discovery strategy, sitemaps is the first place I look for product data, then confirm quality by trying alternative discovery approaches and seeing if coverage matches. 
 
 ## Finding Sitemaps
 
-To take advantage of sitemaps we first need to figure how to find them. Common way to find sitemaps is checking `robots.txt` or `sitemaps.xml` file.  
-For example lets take popular clothing shop `hm.com`:
+To take advantage of sitemaps, we first need to figure how to find them. Common way to find sitemaps is checking `robots.txt` or `sitemaps.xml` file.  
+For example, let's take popular clothing shop `hm.com`:
 
 First we would go to `/robots.txt` page: <https://hm.com/robots.txt>:
 
@@ -148,6 +150,9 @@ These 141 results we're missing are probably indication that sitemap index is ru
 To summarize using sitemaps in web scraping is an efficient, effective and quick product discovery technique with only real down-sides being data staleness, coverage and availability.
 
 {! content/partial/Web Scraping Target Discovery_outro.md !}
+
+---
+<figcaption>image credits: "Map of North America" by NASA Johnson is licensed under CC BY-NC 2.0</figcaption>
 
 
 [#discovery-methods]: /tag/discovery-methods.html

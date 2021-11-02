@@ -4,6 +4,8 @@ Tags: discovery, python, crawling
 Slug: web-scraping-discovery
 Summary: Target discovery in web-scraping is how the scraper explores target website to find scraping targets. For example to scrape product data of an e-commerce website we would need to find urls to each individual product. This step is called "discovery". What types of discovery methods are there?
 
+[% img-full src="banner-telescopes.png" %]
+
 {! content/partial/Web Scraping Target Discovery_intro.md !}
 
 In this blog series tagged [#discovery-methods] we'll take a look at common discovery methods used in web-scraping where each is different enough to have it's own risks, negatives and benefits. We'll target an example clothing store website <https://hm.com> for all of these discovery approaches:
@@ -26,7 +28,10 @@ Hopefully this extensive blog series can help you determine the right way to fin
 
 {! content/partial/Web Scraping Target Discovery_outro.md !}
 
-[Sitemaps]: /web-scraping-discovery-sitemap.html
+---
+<figcaption>image credits: "Telescopes, Mauna Kea, Hawaii" by Gregory Williams is licensed under CC BY-NC-ND 2.0</figcaption>
+
+[Sitemaps]: /web-scraping-discovery-sitemaps.html
 [Search API]: /web-scraping-discovery-search.html
 [Indexes]: /web-scraping-discovery-indexes.html
 [Crawling]: /web-scraping-discovery-crawling.html
