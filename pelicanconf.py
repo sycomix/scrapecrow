@@ -12,6 +12,7 @@ DEFAULT_LANG = "en"
 SITEDESCRIPTION = (
     "Educational blog about web-scraping, crawling and related data extraction subjects"
 )
+SITEURL = "http://localhost:8000"
 SITELOGO = "/images/logo.svg"
 FAVICON = "/images/favicon.ico"
 
@@ -24,17 +25,34 @@ TYPOGRIFY = False
 CONTENT_LICENSE = "CC BY-SA 2021"  #  unused
 UTTERANCES_REPO = "granitosaurus/scrapecrow"
 EMAILSUB_LINK = "https://716df175.sibforms.com/serve/MUIEALpKPp8WjHrVwQOX6keZXLkJRbnFEh2y6YhTmVmT4Z0Khgbi2MFvPO1OObOrjbMi_S0M7VXkXGkcbh36H-SqEwM3dHXxdrOOXwEPGcp9rTQKkQvMkC70Dq9RmCoikia87nLsRcx0VVGmCG2zyx5s8BwpqevRmh70vKSaLe7e95yZDCROMvm2HcN3UpLw7UsFxl_UbI6TjY_e"
+TWITTER_HANDLE = "scrapecrow"
 APPLAUSE_BUTTON = True
 TOC_INSERT = True  # whether to insert TOC after first paragraph
+OG_IMAGE = "/images/logo-og.png"
+TAG_DESC = {
+    "async": "asynchronous programming paradigm",
+    "scaling": "ensuring programs performance scales with the amount of tasks it has to perform",
+    "python": "python programming language",
+    "beginner": "beginner level article",
+    "intermediate": "intermediate level article",
+    "advanced": "advanced level article",
+    "crawling": "programatically following web links to discover content",
+    "discovery-methods": "ways to discover content on a website",
+    "discovery": "finding content on a website",
+    "indexes": "data indexing and search engines",
+    "sitemap": "website content index specifically designed for web scrapers",
+    "reverse-engineering": "understanding how piece of technology is working without having access to the source code",
+}
 
 # Content
-STATIC_PATHS = ["images", "pages", "extra", "examples", "partial"]
+STATIC_PATHS = ["images", "pages", "extra", "examples", "partial", "videos"]
 ARTICLE_EXCLUDES = ["partial", "examples"]
 DEFAULT_CATEGORY = "articles"
 USE_FOLDER_AS_CATEGORY = False
-DEFAULT_PAGINATION = 20
+DEFAULT_PAGINATION = 5
 EXTRA_PATH_METADATA = {
     "extra/CNAME": {"path": "CNAME"},
+    "extra/robots.txt": {"path": "robots.txt"},
     "extra/.nojekyll": {"path": ".nojekyll"},  # required by github
     "images/favicon.ico": {"path": "favicon.ico"},
 }
@@ -69,6 +87,7 @@ FOOTERITEMS = (
 )
 SOCIAL = (
     ("github", "https://github.com/granitosaurus"),
+    ("twitter", "https://twitter.com/Scrapecrow"),
     ("at", "mailto:bernard@scrapecrow.com"),
     ("matrix-org", "https://matrix.to/#/#web-scraping:matrix.org"),
 )
@@ -78,11 +97,11 @@ SOCIAL = (
 PLUGIN_PATHS = ["../pelican-plugins"]
 PLUGINS = ["shortcodes", "pelican-toc"]
 SHORTCODES = {
-    "img": """<a href="/images/{{src}}"><img class="{{cls}}" src="/images/{{src}}" width={{width}} title="{{desc}}"></img></a><figcaption>{{desc}}</figcatpion>""",
-    "img-big": """<a href="/images/{{src}}"><img class="bigc" src="/images/{{src}}" title="{{desc}}"></img></a><figcaption>{{desc}}</figcatpion>""",
-    "img-bigger": """<a href="/images/{{src}}"><img class="biggerc" src="/images/{{src}}" title="{{desc}}"></img></a><figcaption>{{desc}}</figcatpion>""",
-    "img-full": """<a href="/images/{{src}}"><img class="fullc" src="/images/{{src}}" title="{{desc}}"></img></a><figcaption>{{desc}}</figcatpion>""",
-    "mp4gif": """<video width="480" height="240" autoplay loop muted title="{{desc}}"><source src="/gifs/{{src}}" type="video/mp4"></video><figcaption>{{desc}}</figcation>""",
+    "img": """<a href="/images/{{src}}"><img class="{{cls}}" src="/images/{{src}}" width={{width}} title="{{desc}}" loading="lazy"></img></a><figcaption>{{desc}}</figcatpion>""",
+    "img-big": """<a href="/images/{{src}}"><img class="bigc" src="/images/{{src}}" title="{{desc}}" loading="lazy"></img></a><figcaption>{{desc}}</figcatpion>""",
+    "img-bigger": """<a href="/images/{{src}}"><img class="biggerc" src="/images/{{src}}" title="{{desc}}" loading="lazy"></img></a><figcaption>{{desc}}</figcatpion>""",
+    "img-full": """<a href="/images/{{src}}"><img class="fullc" src="/images/{{src}}" title="{{desc}}" loading="lazy"></img></a><figcaption>{{desc}}</figcatpion>""",
+    "mp4gif": """<video class="bigc" autoplay loop muted title="{{desc}}"><source src="/videos/{{src}}.mp4" type="video/mp4"></video><figcaption>{{desc}}</figcation>""",
 }
 TOC = {
     "TOC_HEADERS": "^h[1-6]",
