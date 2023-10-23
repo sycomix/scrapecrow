@@ -10,11 +10,9 @@ async def scrape(url, session):
 async def run():
     _start = time()
     async with AsyncClient() as session:
-        tasks = []
-        for i in range(100):
-            # this url will always take 1 second
-            url = "http://httpbin.org/delay/1"
-            tasks.append(scrape(url, session=session))
+        # this url will always take 1 second
+        url = "http://httpbin.org/delay/1"
+        tasks = [scrape(url, session=session) for _ in range(100)]
         results = await asyncio.gather(*tasks)
     print(f"finished scraping in: {time() - _start:.1f} seconds")
 

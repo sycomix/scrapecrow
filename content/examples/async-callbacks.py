@@ -12,9 +12,9 @@ def collect(result):
 async def run():
     _start = time()
     async with AsyncClient() as session:
-        for i in range(100):
-            # this url will always take 1 second
-            url = "http://httpbin.org/delay/1"
+        # this url will always take 1 second
+        url = "http://httpbin.org/delay/1"
+        for _ in range(100):
             task = asyncio.create_task(scrape(url, session=session))
             task.add_done_callback(collect)
         await asyncio.all_tasks()

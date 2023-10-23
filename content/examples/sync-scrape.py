@@ -10,10 +10,9 @@ def run():
     _start = time()
     results = []
     with Client() as session:
-        for i in range(100):
-            # this url will always take 1 second
-            url = "http://httpbin.org/delay/1"
-            results.append(scrape(url, session=session))
+        # this url will always take 1 second
+        url = "http://httpbin.org/delay/1"
+        results.extend(scrape(url, session=session) for _ in range(100))
     print(f"finished scraping in: {time() - _start:.1f} seconds")
 
 

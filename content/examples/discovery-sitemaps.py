@@ -17,9 +17,7 @@ def parse_sitemap(url: str) -> List[str]:
     )
     # turn html text to a parsable tree object
     doc_tree = Selector(resp.text)
-    # find all <loc> nodes and take their text (which is an url)
-    urls = doc_tree.xpath("//loc/text()").getall()
-    return urls
+    return doc_tree.xpath("//loc/text()").getall()
 
 
 product_urls = set()
